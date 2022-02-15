@@ -1,8 +1,8 @@
 {
   "title": "ALEX HELDT",
   "hometown": "",
-  "artwork": "/images/artists/alex.png",
-  "tags": ["alex"],
+  "artwork": "/assets/artists/alex.png",
+  "tags": ["alex", "alexh"],
   "socials": {
     "email": "alexheldt@gmail.com",
     "twitter": "alexheldtmusic",

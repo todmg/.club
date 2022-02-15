@@ -1,0 +1,56 @@
+@import "./breakpoint.mixin.scss";
+
+.releases-layout {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.release-anchor {
+  position: relative;
+  display: block;
+  height: 100%;
+  width: 100%;
+}
+.release-art-src {
+  width: 223px;
+  height: 223px;
+  object-fit: cover;
+  object-position: center top;
+  padding: 0;
+  margin: 0;
+}
+
+.overlay-content {
+  position: relative;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.release-overlay {
+  top: 0;
+  left: 0;
+  position: absolute;
+  padding: 0 1rem 0 1rem;
+  height: 96.8%;
+  width: 100%;
+  display: block;
+
+  color: white;
+  background-color: rgba(0, 0, 0, 0.521);
+  text-align: center;
+  opacity: 1;
+  transition: opacity 0.2s;
+  @include breakpoint(small) {
+    opacity: 0;
+  }
+}
+
+.release-overlay:hover {
+  opacity: 1;
+  transition: opacity 0.2s;
+}
+
+.release-item {
+  display: inline;
+  padding: 0 1.2rem 0 0;
+}

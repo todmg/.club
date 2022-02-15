@@ -1,0 +1,15 @@
+@import "./breakpoint.mixin.scss";
+
+.contact-container {
+  form {
+    width: 100%;
+  }
+  textarea {
+    width: 100%;
+  }
+  input:not(.clear-input) {
+    width: 100%;
+  }
+}
+.contact-controls {
+}

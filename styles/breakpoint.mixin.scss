@@ -1,0 +1,24 @@
+@mixin breakpoint($device_or_width) {
+  // Stolen from my supervisor, Radames
+  @if $device_or_width == small {
+    @media (min-width: 576px) {
+      @content;
+    }
+  } @else if $device_or_width == medium {
+    @media (min-width: 768px) {
+      @content;
+    }
+  } @else if $device_or_width == large {
+    @media (min-width: 992px) {
+      @content;
+    }
+  } @else if $device_or_width == extra-large {
+    @media (min-width: 1200px) {
+      @content;
+    }
+  } @else {
+    @media (min-width: $device_or_width) {
+      @content;
+    }
+  }
+}

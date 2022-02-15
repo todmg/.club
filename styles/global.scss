@@ -1,0 +1,153 @@
+@import "./breakpoint.mixin.scss";
+// Variables
+
+$break-small: 320px;
+$break-large: 1200px;
+$padding-spacing: 3rem;
+
+// Utilities and Breakpoints
+
+// @mixin breakpoint($device_or_width) {
+//   // Stolen from my supervisor, Radames
+//   @if $device_or_width == small {
+//     @media (min-width: 576px) {
+//       @content;
+//     }
+//   } @else if $device_or_width == medium {
+//     @media (min-width: 768px) {
+//       @content;
+//     }
+//   } @else if $device_or_width == large {
+//     @media (min-width: 992px) {
+//       @content;
+//     }
+//   } @else if $device_or_width == extra-large {
+//     @media (min-width: 1200px) {
+//       @content;
+//     }
+//   } @else {
+//     @media (min-width: $device_or_width) {
+//       @content;
+//     }
+//   }
+// }
+
+.tod-button {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #ffffff;
+  margin: 1rem 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #ffffff;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.tod-button-black {
+  display: inline-block;
+  padding: 0.35em 1.2em;
+  border: 0.1em solid #000;
+  margin: 1rem 0.3em 0.3em 0;
+  border-radius: 0.12em;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+  color: #000;
+  text-align: center;
+  transition: all 0.2s;
+}
+
+.tod-button:hover {
+  color: #000000;
+  background-color: #ffffff;
+}
+.tod-button-black:hover {
+  color: #fff;
+  background-color: #000;
+}
+.button-wide {
+  width: 100%;
+}
+
+img {
+  padding: 0;
+  margin: 0;
+}
+
+.nav {
+  ul {
+    margin: 0 0 0 0;
+    @include breakpoint(small) {
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+  li {
+    display: block;
+    @include breakpoint(small) {
+      display: inline;
+    }
+  }
+}
+
+.social-nav {
+  ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+  }
+  li {
+    display: inline;
+  }
+}
+
+.img-fluid {
+  width: 100%;
+  height: auto;
+}
+
+//Defaults
+
+html {
+  background-color: #f6f6f6;
+
+  font-size: 80%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  @include breakpoint(large) {
+    font-size: 100%;
+  }
+}
+
+.master-container {
+  max-width: 1852px;
+  margin: 0 auto;
+  padding: 0 $padding-spacing 0 $padding-spacing;
+}
+
+a {
+  color: black;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  padding: 0;
+  margin: 0;
+  @include breakpoint(large) {
+  }
+}
+
+h3 {
+  padding: 1rem 0 1rem 0;
+}

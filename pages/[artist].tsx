@@ -2,6 +2,8 @@ import Link from "next/link";
 import useSWR from "swr";
 import fs from "fs"
 import path from "path"
+import SEO from "../components/SEO";
+
 export async function getStaticProps({ params: { artist } }: { params: { artist: string }; }) {
 
     let Artist = require(`../public/data/artist/${artist}.json`);
@@ -29,6 +31,8 @@ const Artist: React.FC<{ artist?: string }> = ({ artist }) => {
 
     return (
         <div className="content">
+            {/* @ts-ignore */}
+            <SEO isArtistPage={true} page={artist.title} Artist={artist} />
             <div className="artist">
                 <div className="artist-info">
                     <div className="artist-info-image">

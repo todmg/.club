@@ -1,0 +1,35 @@
+@import "./breakpoint.mixin.scss";
+
+.img-tl-lg {
+  width: 35rem;
+  height: 13rem;
+  object-fit: cover;
+  object-position: center center;
+  @include breakpoint(small) {
+    width: 35rem;
+    height: 18rem;
+  }
+}
+.item-container {
+  text-align: center;
+  max-width: 35rem;
+}
+
+.releases-timeline {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  .item-container:first-child {
+    padding-top: 0.5rem;
+  }
+  .item-container {
+    margin: 0 auto;
+    padding: 0 0 2rem 0;
+  }
+}
+
+.item-article {
+  h4 {
+    padding-top: 0.5rem;
+  }
+}

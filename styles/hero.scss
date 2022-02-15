@@ -1,0 +1,110 @@
+@import "./breakpoint.mixin.scss";
+
+.hero-container {
+  background-color: #f6f6f6;
+  display: flex;
+  align-items: stretch;
+  align-content: stretch;
+  flex-direction: column;
+  @include breakpoint(small) {
+    flex-direction: row;
+  }
+}
+
+.hero-container-no-flex {
+  .hero-img-src-interview {
+  }
+  .hero-img-container {
+    max-width: 100%;
+  }
+  .hero-detail-container {
+    display: flex; //it's a quick fix to make the title stop wrapping! whatever for now
+    justify-content: center;
+  }
+  .head-title-social {
+    display: block;
+    left: -5px;
+    text-align: center;
+    h1 {
+      font-size: 90%;
+    }
+  }
+  @include breakpoint(small) {
+    .hero-img-src-interview {
+      float: left;
+    }
+    .hero-img-container {
+      max-width: 19rem;
+      float: left;
+      margin-right: 1rem;
+    }
+    .hero-detail-container {
+    }
+    .head-title-social {
+      display: block;
+    }
+  }
+}
+
+.hero-img-container {
+  flex: 2;
+  max-width: 23rem;
+}
+
+.hero-detail-container {
+  flex: 1;
+}
+
+.hero-img-src {
+  width: 100%;
+  height: 402px;
+  object-fit: cover;
+  object-position: center top;
+  @include breakpoint(small) {
+    height: 402px;
+    object-fit: cover;
+    object-position: center top8;
+  }
+}
+
+.hero-img-src-interview {
+  width: 100%;
+  height: 402px;
+  object-fit: cover;
+  object-position: center top;
+  @include breakpoint(small) {
+    height: 402px;
+    object-fit: cover;
+    object-position: center top;
+    margin-right: 0.8rem;
+  }
+}
+
+.head-title-social {
+  * {
+    color: white;
+  }
+  mix-blend-mode: exclusion;
+  font-size: 2.2rem;
+  display: inline-block;
+  position: relative;
+  @include breakpoint(small) {
+    left: -20px;
+  }
+}
+
+.head-bio {
+  max-width: 60rem;
+  padding: 0rem 0rem 0 0rem;
+  @include breakpoint(small) {
+    padding: 0rem 1rem 0 1rem;
+  }
+}
+
+.social-bar li {
+  padding: 0;
+  margin: 0;
+  a {
+    padding: 0 1rem 0 0;
+  }
+}
